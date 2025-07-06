@@ -11,3 +11,5 @@ It allows you to:
 - 💾 Save all tasks using **localStorage** (so your tasks persist even after a page reload)
 
 Link to the project:
+
+https://2d-game-dev.github.io/To-Do-List/
