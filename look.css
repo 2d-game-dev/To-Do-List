@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode .toggle{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+body.dark-mode .container{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+body.light-mode .navbar {
+  background-color: black;
+  color: white;
+}
+
+body.light-mode .toggle{
+  background-color: white;
+  color: black;
+}
+
+body.light-mode .container{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+body.light-mode .btn{
+  background-color: white;
+  color: black;
+}
+
+body.dark-mode .btn{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  height: 500px;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 100px auto 0;
+}
+
+h1 {
+  color: inherit;
+}
+
+hr {
+  width: 540px;
+  margin: 10px;
+}
+
+
+.controller {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.toggle {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.toggle:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-y: auto;
+  max-height: 300px;
+  width: 100%;
+  padding-right: 10px;
+  border-radius: 5px;
+  background-color: inherit;
+  color: inherit;
+}
+
+.form input[type="text"] {
+  flex: 1 1 45%;
+  min-width: 500px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ccc;
+  color: black;
+}
+
+/* Task Input States */
+.task-input.selected {
+  outline: 2px solid rgb(255, 0, 0);
+}
+
+.task-input.done {
+  background-color: rgb(131, 255, 131) !important;
+  color: white !important;
+}
+
+.task-input.half-done {
+  background-color: rgb(255, 204, 0) !important;
+  color: black !important;
+}
+
+@media (max-width: 600px) {
+  .controller {
+    flex-direction:row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+
+  hr{
+    width:390px;
+  }
+}
